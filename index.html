@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robert QA Ninja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800">
   <!-- Navbar -->
   <nav class="fixed w-full bg-white/75 backdrop-blur-sm shadow z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="#hero" class="text-xl font-semibold text-slate-900">ROBERT. QA Ninja</a>
-      <div class="space-x-6 hidden sm:block">
+      <button id="nav-toggle" class="sm:hidden p-2 text-slate-900" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div id="nav-menu" class="hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md flex-col items-start space-y-2 p-4 sm:static sm:flex sm:flex-row sm:space-y-0 sm:space-x-6 sm:bg-transparent sm:shadow-none sm:p-0">
         <a href="#about" class="hover:text-orange-600">O Mnie</a>
         <a href="#skills" class="hover:text-orange-600">Umiejętności</a>
         <a href="#portfolio" class="hover:text-orange-600">Portfolio</a>
@@ -22,10 +35,11 @@
   </nav>
 
   <!-- Hero -->
-  <header id="hero" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-slate-900 to-blue-600 text-white px-4">
-    <div>
-      <h1 class="text-5xl md:text-6xl font-semibold">Robert – Twoje Ostateczne QA Ninja ze Wschodu!</h1>
-      <p class="mt-4 text-xl md:text-2xl text-gray-200">Złapię każdy błąd, zanim jeszcze go zauważysz.</p>
+  <header id="hero" class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1600&q=80')">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-blue-700/80"></div>
+    <div class="relative z-10 px-4">
+      <h1 class="text-5xl md:text-6xl font-semibold text-white drop-shadow-lg">Robert – Twoje Ostateczne QA Ninja ze Wschodu!</h1>
+      <p class="mt-4 text-xl md:text-2xl text-gray-100">Złapię każdy błąd, zanim jeszcze go zauważysz.</p>
       <a href="#portfolio" class="mt-8 inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg shadow-lg transition">Sprawdź Case Study</a>
     </div>
   </header>
@@ -52,20 +66,34 @@
       <h2 class="text-4xl font-semibold text-center">Co potrafię?</h2>
       <p class="mt-2 text-center text-gray-600">Oto narzędzia, którymi siekam błędy.</p>
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="p-4 bg-white shadow rounded">
+        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 4h16v16H4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <h3 class="font-medium text-lg">Selenium</h3>
           <p class="text-sm text-gray-500">Automatyzacja UI to dopiero początek.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded">
+        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 2h8v4H8z"/>
+          </svg>
           <h3 class="font-medium text-lg">Playwright</h3>
           <p class="text-sm text-gray-500">Testy e2e, które nie boją się Shadow DOM.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded">
+        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
           <h3 class="font-medium text-lg">Jenkins</h3>
           <p class="text-sm text-gray-500">Pilnuję każdego pipeline'a.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded">
-          <h3 class="font-medium text-lg">Docker & Kubernetes</h3>
+        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          </svg>
+          <h3 class="font-medium text-lg">Docker &amp; Kubernetes</h3>
           <p class="text-sm text-gray-500">Konteneryzacja bez wpadek.</p>
         </div>
       </div>
@@ -77,21 +105,21 @@
     <h2 class="text-4xl font-semibold text-center">Przykłady mojej pracy</h2>
     <p class="mt-2 text-center text-gray-600">Kilka projektów, w których wyłapałem ukryte błędy.</p>
     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded overflow-hidden">
+      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
         <img src="https://placehold.co/400x250" alt="E-Shop 2.0" class="w-full" />
         <div class="p-4">
           <h3 class="font-semibold text-lg">E-Shop 2.0 – zero błędów w koszyku</h3>
           <p class="text-sm text-gray-500">Testy e2e wykryły krytyczny wyciek sesji.</p>
         </div>
       </div>
-      <div class="bg-white shadow rounded overflow-hidden">
+      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
         <img src="https://placehold.co/400x250" alt="SafeBank" class="w-full" />
         <div class="p-4">
           <h3 class="font-semibold text-lg">SafeBank – SSL w każdej linijce</h3>
           <p class="text-sm text-gray-500">Odkryłem lukę XSS w logowaniu.</p>
         </div>
       </div>
-      <div class="bg-white shadow rounded overflow-hidden">
+      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
         <img src="https://placehold.co/400x250" alt="EventPro" class="w-full" />
         <div class="p-4">
           <h3 class="font-semibold text-lg">EventPro – Stres test przed premierą</h3>
@@ -182,5 +210,14 @@
     </div>
     <p class="text-center mt-8 text-sm">© 2025 Robert. Wszelkie prawa zastrzeżone.</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('nav-menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
