@@ -1,59 +1,186 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robert Tester - najlepszy, AI</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(135deg, #8e2de2, #4a00e0);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #4a00e0;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #3b00b3;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert QA Ninja</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Robert Tester najlepszy, AI</h1>
-    <p>Witamy na oficjalnej stronie Roberta Testera</p>
+<body class="font-sans bg-slate-50 text-slate-800">
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white/75 backdrop-blur-sm shadow z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#hero" class="text-xl font-semibold text-slate-900">ROBERT. QA Ninja</a>
+      <div class="space-x-6 hidden sm:block">
+        <a href="#about" class="hover:text-orange-600">O Mnie</a>
+        <a href="#skills" class="hover:text-orange-600">Umiejętności</a>
+        <a href="#portfolio" class="hover:text-orange-600">Portfolio</a>
+        <a href="#testimonials" class="hover:text-orange-600">Opinie</a>
+        <a href="#contact" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-slate-900 to-blue-600 text-white px-4">
+    <div>
+      <h1 class="text-5xl md:text-6xl font-semibold">Robert – Twoje Ostateczne QA Ninja ze Wschodu!</h1>
+      <p class="mt-4 text-xl md:text-2xl text-gray-200">Złapię każdy błąd, zanim jeszcze go zauważysz.</p>
+      <a href="#portfolio" class="mt-8 inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg shadow-lg transition">Sprawdź Case Study</a>
+    </div>
   </header>
-  <main>
-    <p>Dowiedz się więcej o naszych projektach i odkryj, jak sztuczna inteligencja może usprawnić Twoją pracę.</p>
-    <a href="#" class="cta-button" onclick="alert('Dziękujemy za odwiedzenie!');">Skontaktuj się</a>
-  </main>
-  <footer>
-    &copy; 2025 Robert Tester
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-4">
+    <div class="flex justify-center">
+      <img src="https://placehold.co/300x300" alt="Robert – QA Ninja" class="rounded-full shadow-lg transition-transform hover:scale-105" />
+    </div>
+    <div>
+      <h2 class="text-3xl font-semibold">Kim jestem?</h2>
+      <p class="mt-4 leading-relaxed">Cześć! Jestem Robert – tester z pasją. Wschodnia Polska to moje podwórko, gdzie bugi uciekają na sam widok mojej lupy. Automatyzuję wszystko, co się da i nie boję się wyzwań.</p>
+      <ul class="mt-4 list-disc list-inside space-y-1">
+        <li>10+ lat doświadczenia w QA i CI/CD.</li>
+        <li>Specjalista w testach wydajnościowych i bezpieczeństwa.</li>
+        <li>Fanatyk dokumentacji i open source.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-100 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-semibold text-center">Co potrafię?</h2>
+      <p class="mt-2 text-center text-gray-600">Oto narzędzia, którymi siekam błędy.</p>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="font-medium text-lg">Selenium</h3>
+          <p class="text-sm text-gray-500">Automatyzacja UI to dopiero początek.</p>
+        </div>
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="font-medium text-lg">Playwright</h3>
+          <p class="text-sm text-gray-500">Testy e2e, które nie boją się Shadow DOM.</p>
+        </div>
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="font-medium text-lg">Jenkins</h3>
+          <p class="text-sm text-gray-500">Pilnuję każdego pipeline'a.</p>
+        </div>
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="font-medium text-lg">Docker & Kubernetes</h3>
+          <p class="text-sm text-gray-500">Konteneryzacja bez wpadek.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="max-w-7xl mx-auto py-16 px-4">
+    <h2 class="text-4xl font-semibold text-center">Przykłady mojej pracy</h2>
+    <p class="mt-2 text-center text-gray-600">Kilka projektów, w których wyłapałem ukryte błędy.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://placehold.co/400x250" alt="E-Shop 2.0" class="w-full" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">E-Shop 2.0 – zero błędów w koszyku</h3>
+          <p class="text-sm text-gray-500">Testy e2e wykryły krytyczny wyciek sesji.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://placehold.co/400x250" alt="SafeBank" class="w-full" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">SafeBank – SSL w każdej linijce</h3>
+          <p class="text-sm text-gray-500">Odkryłem lukę XSS w logowaniu.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://placehold.co/400x250" alt="EventPro" class="w-full" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">EventPro – Stres test przed premierą</h3>
+          <p class="text-sm text-gray-500">Ustawiłem JMeter na 10 000 użytkowników.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-gray-100 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-semibold text-center">Co mówią o mnie inni</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <blockquote class="bg-white p-6 shadow rounded italic">
+          "Robert to maszyna. Nie ma bugów, których by nie znalazł."<br>
+          <span class="mt-2 block text-sm text-right">– Anna Kowalska</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 shadow rounded italic">
+          "Myślałem, że testowałem wszystko... aż Robert przysłał raport."<br>
+          <span class="mt-2 block text-sm text-right">– Jan Nowak</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 shadow rounded italic">
+          "Pipeline bez Roberta to lot bez zabezpieczeń."<br>
+          <span class="mt-2 block text-sm text-right">– Michał Wiśniewski</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto py-16 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold">Masz projekt? Upoluję Twoje bugi.</h2>
+        <p class="mt-2 text-gray-600">Wypełnij formularz lub napisz email – odpiszę w 24h.</p>
+        <form class="mt-4 space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Imię i nazwisko</label>
+            <input id="name" type="text" required class="mt-1 w-full border-gray-300 rounded" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" type="email" required class="mt-1 w-full border-gray-300 rounded" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium">Treść wiadomości</label>
+            <textarea id="message" rows="4" required class="mt-1 w-full border-gray-300 rounded"></textarea>
+          </div>
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded">Wyślij</button>
+        </form>
+      </div>
+      <div class="space-y-2">
+        <p><strong>Email:</strong> robert.qa@example.com</p>
+        <p><strong>Telefon:</strong> +48 123 456 789</p>
+        <p><strong>Lokalizacja:</strong> Wschodnia Polska (działam zdalnie globalnie)</p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" aria-label="GitHub" class="text-slate-600 hover:text-slate-900">GitHub</a>
+          <a href="#" aria-label="LinkedIn" class="text-slate-600 hover:text-slate-900">LinkedIn</a>
+          <a href="#" aria-label="Twitter" class="text-slate-600 hover:text-slate-900">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-gray-300 py-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      <div>
+        <p class="font-semibold">QA Ninja. Automatyzacja i Perfekcja.</p>
+      </div>
+      <div>
+        <ul class="space-y-1">
+          <li><a href="#skills" class="hover:text-white">Umiejętności</a></li>
+          <li><a href="#portfolio" class="hover:text-white">Case Study</a></li>
+          <li><a href="#testimonials" class="hover:text-white">Rekomendacje</a></li>
+          <li><a href="#contact" class="hover:text-white">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Śledź mnie</p>
+        <div class="flex space-x-4 mt-2">
+          <a href="#" class="hover:text-white">GitHub</a>
+          <a href="#" class="hover:text-white">LinkedIn</a>
+          <a href="#" class="hover:text-white">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-8 text-sm">© 2025 Robert. Wszelkie prawa zastrzeżone.</p>
   </footer>
 </body>
 </html>
