@@ -6,17 +6,17 @@
   <title>Robert QA Ninja</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800">
   <!-- Navbar -->
-  <nav class="fixed w-full bg-white/75 backdrop-blur-sm shadow z-50">
+  <nav class="fixed w-full bg-white/70 backdrop-blur-lg shadow-lg border-b border-slate-200 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="#hero" class="text-xl font-semibold text-slate-900">ROBERT. QA Ninja</a>
       <button id="nav-toggle" class="sm:hidden p-2 text-slate-900" aria-label="Menu">
@@ -25,22 +25,23 @@
         </svg>
       </button>
       <div id="nav-menu" class="hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md flex-col items-start space-y-2 p-4 sm:static sm:flex sm:flex-row sm:space-y-0 sm:space-x-6 sm:bg-transparent sm:shadow-none sm:p-0">
-        <a href="#about" class="hover:text-orange-600">O Mnie</a>
-        <a href="#skills" class="hover:text-orange-600">Umiejętności</a>
-        <a href="#portfolio" class="hover:text-orange-600">Portfolio</a>
-        <a href="#testimonials" class="hover:text-orange-600">Opinie</a>
-        <a href="#contact" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600">Kontakt</a>
+        <a href="#about" class="text-slate-700 hover:text-orange-600 transition">O Mnie</a>
+        <a href="#skills" class="text-slate-700 hover:text-orange-600 transition">Umiejętności</a>
+        <a href="#portfolio" class="text-slate-700 hover:text-orange-600 transition">Portfolio</a>
+        <a href="#testimonials" class="text-slate-700 hover:text-orange-600 transition">Opinie</a>
+        <a href="#contact" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600 transition">Kontakt</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header id="hero" class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1600&q=80')">
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-blue-700/80"></div>
+  <header id="hero" class="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-slate-900 to-blue-800">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-blue-800/80"></div>
     <div class="relative z-10 px-4">
       <h1 class="text-5xl md:text-6xl font-semibold text-white drop-shadow-lg">Robert – Twoje Ostateczne QA Ninja ze Wschodu!</h1>
+      <p class="mt-2 text-lg md:text-xl text-gray-300">Quality Without Mercy</p>
       <p class="mt-4 text-xl md:text-2xl text-gray-100">Złapię każdy błąd, zanim jeszcze go zauważysz.</p>
-      <a href="#portfolio" class="mt-8 inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg shadow-lg transition">Sprawdź Case Study</a>
+      <a href="#portfolio" class="mt-8 inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg ring-2 ring-transparent hover:ring-orange-500 transition">Sprawdź Case Study</a>
     </div>
   </header>
 
@@ -52,10 +53,25 @@
     <div>
       <h2 class="text-3xl font-semibold">Kim jestem?</h2>
       <p class="mt-4 leading-relaxed">Cześć! Jestem Robert – tester z pasją. Wschodnia Polska to moje podwórko, gdzie bugi uciekają na sam widok mojej lupy. Automatyzuję wszystko, co się da i nie boję się wyzwań.</p>
-      <ul class="mt-4 list-disc list-inside space-y-1">
-        <li>10+ lat doświadczenia w QA i CI/CD.</li>
-        <li>Specjalista w testach wydajnościowych i bezpieczeństwa.</li>
-        <li>Fanatyk dokumentacji i open source.</li>
+      <ul class="mt-4 space-y-2">
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0 text-orange-500 mt-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.704 5.292a1 1 0 00-1.408-1.416l-7.296 7.266-3.296-3.296a1 1 0 00-1.408 1.416l4 4a1 1 0 001.408 0l8-7.97z" clip-rule="evenodd" />
+          </svg>
+          <span class="ml-2">10+ lat doświadczenia w QA i CI/CD.</span>
+        </li>
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0 text-orange-500 mt-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.704 5.292a1 1 0 00-1.408-1.416l-7.296 7.266-3.296-3.296a1 1 0 00-1.408 1.416l4 4a1 1 0 001.408 0l8-7.97z" clip-rule="evenodd" />
+          </svg>
+          <span class="ml-2">Specjalista w testach wydajnościowych i bezpieczeństwa.</span>
+        </li>
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0 text-orange-500 mt-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.704 5.292a1 1 0 00-1.408-1.416l-7.296 7.266-3.296-3.296a1 1 0 00-1.408 1.416l4 4a1 1 0 001.408 0l8-7.97z" clip-rule="evenodd" />
+          </svg>
+          <span class="ml-2">Fanatyk dokumentacji i open source.</span>
+        </li>
       </ul>
     </div>
   </section>
@@ -66,14 +82,14 @@
       <h2 class="text-4xl font-semibold text-center">Co potrafię?</h2>
       <p class="mt-2 text-center text-gray-600">Oto narzędzia, którymi siekam błędy.</p>
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+        <div class="p-6 bg-white rounded border border-slate-200 shadow hover:shadow-lg hover:-translate-y-1 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M4 4h16v16H4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h3 class="font-medium text-lg">Selenium</h3>
           <p class="text-sm text-gray-500">Automatyzacja UI to dopiero początek.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+        <div class="p-6 bg-white rounded border border-slate-200 shadow hover:shadow-lg hover:-translate-y-1 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 2h8v4H8z"/>
@@ -81,14 +97,14 @@
           <h3 class="font-medium text-lg">Playwright</h3>
           <p class="text-sm text-gray-500">Testy e2e, które nie boją się Shadow DOM.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+        <div class="p-6 bg-white rounded border border-slate-200 shadow hover:shadow-lg hover:-translate-y-1 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
           </svg>
           <h3 class="font-medium text-lg">Jenkins</h3>
           <p class="text-sm text-gray-500">Pilnuję każdego pipeline'a.</p>
         </div>
-        <div class="p-4 bg-white shadow rounded hover:shadow-lg transition">
+        <div class="p-6 bg-white rounded border border-slate-200 shadow hover:shadow-lg hover:-translate-y-1 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />
             <circle cx="12" cy="12" r="10" stroke-width="2"/>
@@ -105,22 +121,25 @@
     <h2 class="text-4xl font-semibold text-center">Przykłady mojej pracy</h2>
     <p class="mt-2 text-center text-gray-600">Kilka projektów, w których wyłapałem ukryte błędy.</p>
     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
-        <img src="https://placehold.co/400x250" alt="E-Shop 2.0" class="w-full" />
+        <div class="group relative bg-white rounded border border-slate-200 overflow-hidden shadow hover:shadow-lg hover:-translate-y-1 transition">
+          <img src="https://placehold.co/400x250" alt="E-Shop 2.0" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
         <div class="p-4">
           <h3 class="font-semibold text-lg">E-Shop 2.0 – zero błędów w koszyku</h3>
           <p class="text-sm text-gray-500">Testy e2e wykryły krytyczny wyciek sesji.</p>
         </div>
       </div>
-      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
-        <img src="https://placehold.co/400x250" alt="SafeBank" class="w-full" />
+        <div class="group relative bg-white rounded border border-slate-200 overflow-hidden shadow hover:shadow-lg hover:-translate-y-1 transition">
+          <img src="https://placehold.co/400x250" alt="SafeBank" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
         <div class="p-4">
           <h3 class="font-semibold text-lg">SafeBank – SSL w każdej linijce</h3>
           <p class="text-sm text-gray-500">Odkryłem lukę XSS w logowaniu.</p>
         </div>
       </div>
-      <div class="bg-white shadow rounded overflow-hidden transform hover:scale-105 transition">
-        <img src="https://placehold.co/400x250" alt="EventPro" class="w-full" />
+        <div class="group relative bg-white rounded border border-slate-200 overflow-hidden shadow hover:shadow-lg hover:-translate-y-1 transition">
+          <img src="https://placehold.co/400x250" alt="EventPro" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
         <div class="p-4">
           <h3 class="font-semibold text-lg">EventPro – Stres test przed premierą</h3>
           <p class="text-sm text-gray-500">Ustawiłem JMeter na 10 000 użytkowników.</p>
@@ -159,17 +178,17 @@
         <form class="mt-4 space-y-4">
           <div>
             <label for="name" class="block text-sm font-medium">Imię i nazwisko</label>
-            <input id="name" type="text" required class="mt-1 w-full border-gray-300 rounded" />
+              <input id="name" type="text" required class="mt-1 w-full rounded border-gray-300 focus:border-orange-500 focus:ring-orange-500" />
           </div>
           <div>
             <label for="email" class="block text-sm font-medium">Email</label>
-            <input id="email" type="email" required class="mt-1 w-full border-gray-300 rounded" />
+              <input id="email" type="email" required class="mt-1 w-full rounded border-gray-300 focus:border-orange-500 focus:ring-orange-500" />
           </div>
           <div>
             <label for="message" class="block text-sm font-medium">Treść wiadomości</label>
-            <textarea id="message" rows="4" required class="mt-1 w-full border-gray-300 rounded"></textarea>
+              <textarea id="message" rows="4" required class="mt-1 w-full rounded border-gray-300 focus:border-orange-500 focus:ring-orange-500"></textarea>
           </div>
-          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded">Wyślij</button>
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded shadow ring-2 ring-transparent hover:ring-orange-500 transition">Wyślij</button>
         </form>
       </div>
       <div class="space-y-2">
@@ -186,7 +205,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-gray-300 py-8">
+  <footer class="bg-slate-900 text-gray-300 py-8 border-t border-slate-700">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
       <div>
         <p class="font-semibold">QA Ninja. Automatyzacja i Perfekcja.</p>
